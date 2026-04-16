@@ -88,10 +88,6 @@ Proyecto-Cerradura_con_teclado_y_Contrase-a
 ├── LICENSE
 ├── .gitignore
 ├── README.md
-├── /documentos
-│   ├── actividad6.pdf
-│   ├── actividad7.pdf
-│   └── actividad8.pdf
 ├── /diagramas
 │   ├── diagrama_bloques.png
 │   ├── diagrama_flujo.png
