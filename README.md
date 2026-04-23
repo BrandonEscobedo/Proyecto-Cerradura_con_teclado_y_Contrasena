@@ -267,12 +267,16 @@ Sistema embebido basado en Arduino que integra:
 
 **¿La contraseña se pierde al apagar el Arduino?**
 No, se almacena en la EEPROM, por lo que permanece guardada.
+
 **¿Cómo cambio la contraseña?**
 Presionando la tecla 'A' e ingresando la contraseña actual.
+
 **¿Por qué no funciona el teclado?**
 Revisar conexiones de filas y columnas.
+
 **¿Por qué el servo no gira?**
 Verificar alimentación y pin.
+
 **¿Por qué no funciona la pantalla LCD?**
 Verificar la dirección I2C (0x27 o 0x20), conexiones SDA/SCL y la librería utilizada.
 
