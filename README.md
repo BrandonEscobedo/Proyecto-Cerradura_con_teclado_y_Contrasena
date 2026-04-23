@@ -45,9 +45,9 @@ Además, el proyecto se desarrolla en el contexto de microcontroladores programa
 *	Confirmación de nueva contraseña
 
 ### No incluye
-•	Conectividad remota
-•	Base de datos de usuarios
-•	Interfaz gráfica avanzada
+*	Conectividad remota
+*	Base de datos de usuarios
+*	Interfaz gráfica avanzada
 
 ## Cómo funciona internamente?
 ### Descripción general
@@ -82,7 +82,7 @@ El sistema utiliza la memoria EEPROM del Arduino para almacenar la contraseña, 
 13.	Si no coinciden → se muestra error
  
 ## Estructura del proyecto
-““
+```
 Proyecto-Cerradura_con_teclado_y_Contrase-a
 │
 ├── lab_micro.ino
@@ -93,7 +93,7 @@ Proyecto-Cerradura_con_teclado_y_Contrase-a
 │   ├── diagrama_bloques.png
 │   ├── diagrama_flujo.png
 │   └── diagrama_esquematico.png
-““
+```
 
 ## Tecnologías utilizadas
 
@@ -258,14 +258,15 @@ Sistema embebido basado en Arduino que integra:
 •	Configuración dinámica de contraseña
 
 ## FAQ
-** ¿La contraseña se pierde al apagar el Arduino? **
+
+**¿La contraseña se pierde al apagar el Arduino?**
 No, se almacena en la EEPROM, por lo que permanece guardada.
-** ¿Cómo cambio la contraseña? **
+**¿Cómo cambio la contraseña?**
 Presionando la tecla 'A' e ingresando la contraseña actual.
 **¿Por qué no funciona el teclado?**
 Revisar conexiones de filas y columnas.
 **¿Por qué el servo no gira?**
 Verificar alimentación y pin.
-** ¿Por qué no funciona la pantalla LCD? **
+**¿Por qué no funciona la pantalla LCD?**
 Verificar la dirección I2C (0x27 o 0x20), conexiones SDA/SCL y la librería utilizada.
 
