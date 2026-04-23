@@ -1,12 +1,14 @@
-
+﻿
 ## Información del proyecto: Cerradura con Teclado y Contraseña 
 Autores: 
-•	Brandon Yahir Escobedo Rodriguez 1998697  
-•	Mauricio Campos Tamez 2002942 
-•	Andrea Danaee Arrieta Martínez 2005151  
+*	Brandon Yahir Escobedo Rodriguez 1998697  
+*	Mauricio Campos Tamez 2002942 
+*	Andrea Danaee Arrieta Martínez 2005151  
 
 Materia: Laboratorio de controladores y microcontroladores programables. 
+
 Docente: Ing. Héctor Hugo Flores Moreno 
+
 Fecha:	16-04-2026
 
 ## Descripción general del proyecto
@@ -23,24 +25,24 @@ A diferencia de versiones básicas con contraseña fija, este sistema permite la
 El objetivo principal es diseñar e implementar un sistema funcional de control de acceso que permita aplicar conceptos de microcontroladores, manejo de entradas/salidas digitales y control de actuadores.
 ## Contexto
 Este sistema puede ser aplicado en:
-•	Puertas electrónicas
-•	Cajas de seguridad
-•	Sistemas de acceso en oficinas o laboratorios
-•	Proyectos educativos de electrónica y programación.
+*	Puertas electrónicas
+*	Cajas de seguridad
+*	Sistemas de acceso en oficinas o laboratorios
+*	Proyectos educativos de electrónica y programación.
 
 
 Además, el proyecto se desarrolla en el contexto de microcontroladores programables de bajo costo, utilizando componentes accesibles y ampliamente disponibles como el Arduino UNO, un teclado matricial 4x4, un servomotor, LEDs ,un buzzer y una pantalla LCD I2C. Esto permite replicar soluciones reales de control de acceso sin requerir hardware especializado o costoso.
 
 ## Alcance
 ### Incluye
-•	Validación de una contraseña fija
-•	Control de apertura/cierre mediante servomotor
-•	Indicadores visuales (LEDs)
-•	Alarma sonora tras intentos fallidos
-•	Almacenamiento persistente de contraseña en EEPROM 
-•	Modo de configuración para cambio de contraseña 
-•	Validación de contraseña actual antes de permitir cambios 
-•	Confirmación de nueva contraseña
+*	Validación de una contraseña fija
+*	Control de apertura/cierre mediante servomotor
+*	Indicadores visuales (LEDs)
+*	Alarma sonora tras intentos fallidos
+*	Almacenamiento persistente de contraseña en EEPROM 
+*	Modo de configuración para cambio de contraseña 
+*	Validación de contraseña actual antes de permitir cambios 
+*	Confirmación de nueva contraseña
 
 ### No incluye
 •	Conectividad remota
@@ -53,17 +55,17 @@ El sistema funciona mediante la interacción entre dispositivos de entrada (tecl
 El sistema utiliza la memoria EEPROM del Arduino para almacenar la contraseña, permitiendo conservarla incluso si el dispositivo se apaga.
 ### Arquitectura del sistema
 #### Entrada
-•	Teclado matricial 4x4
+* Teclado matricial 4x4
 
 #### Procesamiento
-•	Arduino UNO
+*	Arduino UNO
 
 #### Salida
-•	Servomotor
-•	LED verde
-•	LED rojo
-•	Buzzer
-•	Pantalla LCD I2C
+*	Servomotor
+*	LED verde
+*	LED rojo
+*	Buzzer
+*	Pantalla LCD I2C
 ### Flujo del sistema
 1.	El sistema inicia con la puerta cerrada 
 2.	La pantalla LCD muestra mensaje de espera 
@@ -97,21 +99,21 @@ Proyecto-Cerradura_con_teclado_y_Contrase-a
 
 ### Requisitos del Hardware
 
-•	Arduino UNO
-•	Teclado matricial 4x4
-•	Servomotor
-•	LEDs (rojo y verde)
-•	Buzzer
-•	Resistencias 220Ω
-•	Pantalla LCD I2C
+*	Arduino UNO
+*	Teclado matricial 4x4
+*	Servomotor
+*	LEDs (rojo y verde)
+*	Buzzer
+*	Resistencias 220Ω
+*	Pantalla LCD I2C
 
 ### Requisitos del Software 
-•	Arduino IDE
-•	Lenguaje C/C++
-•	Librerías:
-•	Keypad.h
-•	Servo.h
-•	LiquidCrystal_I2C.h
+*	Arduino IDE
+*	Lenguaje C/C++
+*	Librerías:
+*	Keypad.h
+*	Servo.h
+*	LiquidCrystal_I2C.h
 
 ## Conexiones del sistema
 | Componente       | Pin Arduino |
@@ -124,29 +126,29 @@ Proyecto-Cerradura_con_teclado_y_Contrase-a
 | LED rojo         | 13          |
 | Pantalla LCD I2C | SDA → A4, SCL → A5 |
 ## Comunicación entre módulos
-•	El teclado envía datos al Arduino mediante pines digitales
-•	El Arduino procesa la contraseña
-•	El servo recibe señal PWM
-•	LEDs y buzzer reciben señales digitales
-•	Todo ocurre dentro del ciclo ‘loop()‘
+*	El teclado envía datos al Arduino mediante pines digitales
+*	El Arduino procesa la contraseña
+*	El servo recibe señal PWM
+*	LEDs y buzzer reciben señales digitales
+*	Todo ocurre dentro del ciclo ‘loop()‘
 
 La pantalla LCD se comunica con el Arduino mediante el protocolo I2C, utilizando solo dos pines (SDA y SCL), lo que permite optimizar el uso de pines del microcontrolador y simplificar el cableado.
 
 El Arduino también interactúa con la memoria EEPROM para almacenar y recuperar la contraseña, permitiendo persistencia de datos sin necesidad de almacenamiento externo.
 ## Decisiones técnicas
-•	Uso de contraseña configurable almacenada en EEPROM para mayor flexibilidad y persistencia 
-•	Contador de intentos para seguridad
-•	Uso de PWM para control del servo
-•	Teclado matricial para optimizar pines
-•	Retroalimentación visual y sonora
-•	Uso de pantalla LCD I2C para mostrar información al usuario sin consumir muchos pines
-•	Implementación de validación doble (nueva contraseña y confirmación) para evitar errores del usuario 
-•	Uso de modo de configuración activado por teclado (tecla 'A') 
+*	Uso de contraseña configurable almacenada en EEPROM para mayor flexibilidad y persistencia 
+*	Contador de intentos para seguridad
+*	Uso de PWM para control del servo
+*	Teclado matricial para optimizar pines
+*	Retroalimentación visual y sonora
+*	Uso de pantalla LCD I2C para mostrar información al usuario sin consumir muchos pines
+*	Implementación de validación doble (nueva contraseña y confirmación) para evitar errores del usuario 
+*	Uso de modo de configuración activado por teclado (tecla 'A') 
  
 ## Modo de configuración de contraseña
 El sistema incluye un modo de configuración que permite cambiar la contraseña sin necesidad de reprogramar el Arduino.
 ### Activación:
-•	Se presiona la tecla 'A' desde el teclado 
+*	Se presiona la tecla 'A' desde el teclado 
 ### Flujo de cambio:
 1.	El sistema solicita la contraseña actual 
 2.	Si es correcta, solicita una nueva contraseña 
@@ -158,9 +160,9 @@ o	Se muestra mensaje de éxito
 o	Se muestra mensaje de error 
 o	No se realiza el cambio 
 ### Validaciones implementadas:
-•	Verificación de contraseña actual 
-•	Confirmación de nueva contraseña 
-•	Longitud fija (4 dígitos) 
+*	Verificación de contraseña actual 
+*	Confirmación de nueva contraseña 
+*	Longitud fija (4 dígitos) 
 Esto garantiza que solo usuarios autorizados puedan modificar el acceso.
 
 ## Instalación y ejecución
@@ -179,23 +181,23 @@ lab_micro.ino
 
 3.	Instalar librerías en Arduino IDE:
 
-•	Keypad
-•	Servo
+*	Keypad
+*	Servo
 
 ### Ejecución
 1.	Conectar el circuito según la tabla de conexiones
 2.	Seleccionar:
 
-•	Placa: Arduino UNO
-•	Puerto correcto según donde se conecto 
+*	Placa: Arduino UNO
+*	Puerto correcto según donde se conecto 
 3.	Subir el código
 4.	Probar el sistema
 
 ## Uso
-•	Ingresar contraseña (ejemplo: ‘1234‘)
-•	Presionar ‘#‘ para validar
-•	Presionar ‘*‘ para borrar
-•	Presionar ‘A’ para entrar en modo configuración de contraseña
+*	Ingresar contraseña (ejemplo: ‘1234‘)
+*	Presionar ‘#‘ para validar
+*	Presionar ‘*‘ para borrar
+*	Presionar ‘A’ para entrar en modo configuración de contraseña
 ### Cambio de contraseña
 1.	Presionar ‘A’ 
 2.	Ingresar contraseña actual 
@@ -206,15 +208,15 @@ lab_micro.ino
 
 ## Pruebas
 Se realizaron pruebas para validar el comportamiento del sistema:
-• Acceso correcto → apertura de servo + LED verde + mensaje en LCD
-• Acceso incorrecto → LED rojo + buzzer + mensaje en LCD
-• 3 intentos fallidos → activación de alarma sonora y visual
-• Visualización de mensajes en pantalla LCD en cada estado
-• Funcionamiento del borrado de entrada con ‘*’
-• Validación del modo configuración (tecla ‘A’)
-• Cambio de contraseña exitoso con almacenamiento en EEPROM
-• Validación de errores al confirmar contraseña incorrecta
-• Persistencia de la contraseña después de reiniciar el sistema
+* Acceso correcto → apertura de servo + LED verde + mensaje en LCD
+* Acceso incorrecto → LED rojo + buzzer + mensaje en LCD
+* 3 intentos fallidos → activación de alarma sonora y visual
+* Visualización de mensajes en pantalla LCD en cada estado
+* Funcionamiento del borrado de entrada con ‘*’
+* Validación del modo configuración (tecla ‘A’)
+* Cambio de contraseña exitoso con almacenamiento en EEPROM
+* Validación de errores al confirmar contraseña incorrecta
+* Persistencia de la contraseña después de reiniciar el sistema
 
 ## Contribución
 1.	Clonar el repositorio
@@ -231,28 +233,28 @@ https://www.tinkercad.com/things/7DyngwwBPCO-micropia?sharecode=4p2gxqOqlpozgwG4
 ““
 
 **Uso de la simulación:**
-•	Abrir el enlace en el navegador
-•	Iniciar la simulación
-•	Probar el ingreso de la contraseña (‘1234‘) desde el teclado
-•	Verificar el comportamiento del servo, LEDs, buzzer y pantalla LCD I2C
-•	Nota: Este recurso es opcional y sirve como apoyo visual para replicar el circuito y validar el funcionamiento antes de implementarlo físicamente.
+*	Abrir el enlace en el navegador
+*	Iniciar la simulación
+*	Probar el ingreso de la contraseña (‘1234‘) desde el teclado
+*	Verificar el comportamiento del servo, LEDs, buzzer y pantalla LCD I2C
+*	Nota: Este recurso es opcional y sirve como apoyo visual para replicar el circuito y validar el funcionamiento antes de implementarlo físicamente.
 
 ## Diagramas
 El proyecto incluye:
-•	Diagrama de bloques
+*	Diagrama de bloques
 
 ![Diagrama de bloques](diagramas/diagrama_bloques.png)
-•	Diagrama pictorico
+*	Diagrama pictorico
 ![Diagrama de bloques](diagramas/diagrama_PICTÓRICO.png)
-•	Diagrama esquemático
+*	Diagrama esquemático
 ![Diagrama de bloques](diagramas/diagrama_ESQUEMÁTICO.png)
 ## Resumen técnico
 Sistema embebido basado en Arduino que integra:
-•	Entrada digital (teclado) 
-•	Procesamiento lógico 
-•	Persistencia de datos mediante EEPROM 
-•	Salidas físicas (servo, LEDs, buzzer) 
-•	Interfaz de usuario mediante pantalla LCD I2C 
+*	Entrada digital (teclado) 
+*	Procesamiento lógico 
+*	Persistencia de datos mediante EEPROM 
+*	Salidas físicas (servo, LEDs, buzzer) 
+*	Interfaz de usuario mediante pantalla LCD I2C 
 •	Configuración dinámica de contraseña
 
 ## FAQ
