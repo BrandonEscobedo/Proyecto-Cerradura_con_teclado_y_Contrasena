@@ -9,7 +9,7 @@ Materia: Laboratorio de controladores y microcontroladores programables.
 
 Docente: Ing. Héctor Hugo Flores Moreno 
 
-Fecha:	16-04-2026
+Fecha:	23-04-2026
 
 ## Descripción general del proyecto
 Este proyecto consiste en una cerradura electrónica controlada mediante un teclado matricial 4x4 conectado a un Arduino UNO R3. Permite al usuario ingresar una contraseña (PIN) para activar un servomotor que simula la apertura de una puerta.
